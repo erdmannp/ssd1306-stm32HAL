@@ -19,11 +19,13 @@
 
 #if __has_include("ssd1306_config.h")
     #include "ssd1306_config.h"
-#else
-    const uint8_t ssd1306_default_brightness = 0xFF;
-    #include "stm32f4xx_hal.h"
 #endif
+
 #include "fonts.h"
+// Default brightness
+#ifndef SSD1306_DEFAULT_BRIGHTNESS
+#define SSD1306_DEFAULT_BRIGHTNESS 0xFF
+#endif
 
 // I2c address
 #ifndef SSD1306_I2C_ADDR

@@ -12,7 +12,7 @@ rename to ssd_1306_config.h and put in the project, to make ssd1306 lib configur
 
 // define the default brightness of the display from 0 to 255:
 
-const uint8_t ssd1306_default_brightness = 0xFF;
+#define SSD1306_DEFAULT_BRIGHTNESS 0xFF
 
 
 #endif
