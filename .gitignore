@@ -1,3 +1,4 @@
 **/Debug
 **/.settings
 generated/*
+__pycache__

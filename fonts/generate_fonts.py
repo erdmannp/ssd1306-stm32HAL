@@ -86,6 +86,6 @@ if (__name__ == '__main__'):
             results=res,
 
         )
-        with open(filename, mode="w", encoding="utf-8") as header:
+        with open(os.path.join('../generated/', filename), mode="w", encoding="utf-8") as header:
             header.write(content)
         

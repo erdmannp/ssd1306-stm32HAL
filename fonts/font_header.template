@@ -1,0 +1,12 @@
+#pragma once
+
+#include "fonts.h"
+#include "stdint.h"
+
+static const uint16_t _Font{{ font.font }}_{{ font.width }}x{{ font.height }}[] = {
+    {% for result in results %}
+        {{ result.data|join(', ') }}, // Char: '{{ result.char }}'
+    {% endfor %}
+};
+
+FontDef Font_{{ font.font }}_{{ font.width }}x{{ font.height }} =  { {{ font.width }}, {{ font.height }}, _Font{{ font.font }}_{{ font.width }}x{{ font.height }} };
