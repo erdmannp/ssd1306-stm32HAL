@@ -59,7 +59,6 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c \
 Src/system_stm32f4xx.c
 
 C_SOURCES += \
-Src/fonts.c \
 Src/ssd1306.c
 
 

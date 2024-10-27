@@ -36,7 +36,7 @@ uint8_t ssd1306_Init(I2C_HandleTypeDef *hi2c)
     status += ssd1306_WriteCommand(hi2c, 0x10);   // Set high column address
     status += ssd1306_WriteCommand(hi2c, 0x40);   // Set start line address
     status += ssd1306_WriteCommand(hi2c, 0x81);   // set contrast control register
-    status += ssd1306_WriteCommand(hi2c, 0xFF);
+    status += ssd1306_WriteCommand(hi2c, ssd1306_default_brightness);
     status += ssd1306_WriteCommand(hi2c, 0xA1);   // Set segment re-map 0 to 127
     status += ssd1306_WriteCommand(hi2c, 0xA6);   // Set normal display
 

@@ -12,11 +12,5 @@ typedef struct {
     const uint16_t *data;       /* Pointer to data font data array */
 } FontDef;
 
-//
-//  Export the 3 available fonts
-//
-extern FontDef Font_7x10;
-extern FontDef Font_11x18;
-extern FontDef Font_16x26;
 
 #endif  // _FONTS_H

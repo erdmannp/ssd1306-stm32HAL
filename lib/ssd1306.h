@@ -4,7 +4,7 @@
  *
  * To use this library with ssd1306 oled display you will need to customize the defines below.
  *
- * This library uses 2 extra files (fonts.c/h).
+ * This library uses 2 extra files (fonts.c/h)
  * In this files are 3 different fonts you can use:
  *     - Font_7x10
  *     - Font_11x18
@@ -15,7 +15,14 @@
 #ifndef _SSD1306_H
 #define _SSD1306_H
 
-#include "stm32f4xx_hal.h"
+#include "stdint.h"
+
+#if __has_include("ssd1306_config.h")
+    #include "ssd1306_config.h"
+#else
+    const uint8_t ssd1306_default_brightness = 0xFF;
+    #include "stm32f4xx_hal.h"
+#endif
 #include "fonts.h"
 
 // I2c address
@@ -72,5 +79,6 @@ char ssd1306_WriteChar(char ch, FontDef Font, SSD1306_COLOR color);
 char ssd1306_WriteString(const char* str, FontDef Font, SSD1306_COLOR color);
 void ssd1306_SetCursor(uint8_t x, uint8_t y);
 void ssd1306_InvertColors(void);
+uint8_t ssd1306_SetBrightness(uint8_t brightness);
 
 #endif  // _SSD1306_H

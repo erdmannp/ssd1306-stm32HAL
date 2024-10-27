@@ -25,6 +25,7 @@
 
 #include "ssd1306.h"
 #include "fonts.h"
+#include "font_default.h"
 
 /* USER CODE END Includes */
 
